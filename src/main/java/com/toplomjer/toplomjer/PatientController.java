@@ -2,6 +2,7 @@ package com.toplomjer.toplomjer;
 
 import com.toplomjer.toplomjer.model.Patient;
 import com.toplomjer.toplomjer.model.PatientRepository;
+import com.toplomjer.toplomjer.model.Record;
 import com.toplomjer.toplomjer.model.RecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,6 +31,15 @@ public class PatientController {
             return "pacijent-slider.html";
         }
 
+    }
+
+    /* */
+
+    @GetMapping("/addRecord")
+    public String addRecord(Model model, int painLevel, int id) {
+        Record newRecord = new Record(patientRepository.findById(id), painLevel);
+        recordRepository.save(newRecord);
+        return "checkmark_temp.html";
     }
 
 
