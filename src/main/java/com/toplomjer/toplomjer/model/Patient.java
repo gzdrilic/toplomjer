@@ -1,8 +1,10 @@
 package com.toplomjer.toplomjer.model;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
+@Entity
 public class Patient {
 
     @GeneratedValue()

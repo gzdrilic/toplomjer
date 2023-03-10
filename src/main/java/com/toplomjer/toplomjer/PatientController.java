@@ -1,5 +1,6 @@
 package com.toplomjer.toplomjer;
 
+import com.toplomjer.toplomjer.model.Patient;
 import com.toplomjer.toplomjer.model.PatientRepository;
 import com.toplomjer.toplomjer.model.RecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +15,19 @@ public class PatientController {
     @Autowired
     PatientRepository patientRepository;
 
-
+    @Autowired
     RecordRepository recordRepository;
+
+    Patient currPatient;
 
     @GetMapping("/login")
     public String processLogin(Model model,String username, String password) {
-        if (patientRepository.findByUsernameAndPassword(username, password) != null) {
-
+        Patient currPatient = patientRepository.findByUsernameAndPassword(username, password);
+        if ( currPatient != null) {
+            model.addAttribute("patient", currPatient);
+            return "patient.html";
+        } else {
+            return "pacijent-slider.html";
         }
 
     }

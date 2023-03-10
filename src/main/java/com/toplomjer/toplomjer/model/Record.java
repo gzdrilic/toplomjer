@@ -1,10 +1,8 @@
 package com.toplomjer.toplomjer.model;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
+@Entity
 public class Record {
 
 
@@ -19,6 +17,11 @@ public class Record {
 
 
     private int painLevel;
+
+    private int emotionLevel;
+
+    private String text;
+
 
 
     public Record() {
@@ -51,5 +54,29 @@ public class Record {
 
     public void setPainLevel(int painLevel) {
         this.painLevel = painLevel;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getEmotionLevel() {
+        return emotionLevel;
+    }
+
+    public void setEmotionLevel(int emotionLevel) {
+        this.emotionLevel = emotionLevel;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }
