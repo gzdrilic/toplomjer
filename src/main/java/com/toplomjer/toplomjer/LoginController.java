@@ -18,6 +18,11 @@ public class LoginController {
     @Autowired
     RecordRepository recordRepository;
 
+    @GetMapping("/")
+    public String showLogin(Model model) {
+        return "login.html";
+    }
+
     @GetMapping("/login")
     public String processLogin(Model model, String username, String password) {
         User currUser = userRepository.findByUsernameAndPassword(username, password);
