@@ -13,7 +13,7 @@ public class Record {
 
     @ManyToOne
     @JoinColumn(name = "patient_id")
-    private Patient patient;
+    private User patient;
 
 
     private int painLevel;
@@ -28,23 +28,23 @@ public class Record {
 
     }
 
-    public Record(Patient patient) {
+    public Record(User patient) {
         this.patient = patient;
         this.painLevel = 0;
     }
 
-    public Record(Patient patient, int painLevel) {
+    public Record(User patient, int painLevel) {
         this.patient = patient;
         this.painLevel = painLevel;
 
     }
 
 
-    public Patient getPatient() {
+    public User getPatient() {
         return patient;
     }
 
-    public void setPatient(Patient patient) {
+    public void setPatient(User patient) {
         this.patient = patient;
     }
 
