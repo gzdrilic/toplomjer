@@ -6,7 +6,7 @@ import jakarta.persistence.*;
 public class Record {
 
 
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
     private int id;
 
