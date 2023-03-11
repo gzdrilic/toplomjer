@@ -5,11 +5,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class Patient {
+public class User {
 
     @GeneratedValue()
     @Id
-    private int id;
+    private long id;
+
+    // 0 - admin, 1 - pacijent
+    private int permissionLevel;
 
     private String firstName;
 
@@ -20,14 +23,15 @@ public class Patient {
     private String password;
 
 
-    public Patient() {
+    public User() {
     }
 
-    public Patient(String firstName, String lastName, String username, String password) {
+    public User(String firstName, String lastName, String username, String password, int permissionLevel) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.username = username;
         this.password = password;
+        this.permissionLevel = permissionLevel;
     }
 
     public String getFirstName() {
@@ -62,11 +66,19 @@ public class Patient {
         this.password = password;
     }
 
-    public int getId() {
+    public int getPermissionLevel() {
+        return permissionLevel;
+    }
+
+    public void setPermissionLevel(int permissionLevel) {
+        this.permissionLevel = permissionLevel;
+    }
+
+    public long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(long id) {
         this.id = id;
     }
 
