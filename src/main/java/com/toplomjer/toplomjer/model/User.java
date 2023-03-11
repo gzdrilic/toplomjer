@@ -4,12 +4,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
-@Entity
+@Entity(name = "APP_USER")
 public class User {
 
-    @GeneratedValue()
     @Id
-    private long id;
+    @GeneratedValue()
+
+    private Long id;
 
     // 0 - admin, 1 - pacijent
     private int permissionLevel;
@@ -74,11 +75,11 @@ public class User {
         this.permissionLevel = permissionLevel;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

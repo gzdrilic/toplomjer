@@ -10,8 +10,7 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
     User findByUsernameAndPassword(String username, String password);
 
-    List<User> findByPermissionlevel(int permissionLevel);
+    List<User> findByPermissionLevel(int permissionLevel);
 
-    User findById(long id);
 
 }

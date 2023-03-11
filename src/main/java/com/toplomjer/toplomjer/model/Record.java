@@ -8,11 +8,11 @@ public class Record {
 
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id
-    private int id;
+    private Long id;
 
 
     @ManyToOne
-    @JoinColumn(name = "patient_id")
+    @JoinColumn(name = "user_id")
     private User patient;
 
 
@@ -56,11 +56,11 @@ public class Record {
         this.painLevel = painLevel;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

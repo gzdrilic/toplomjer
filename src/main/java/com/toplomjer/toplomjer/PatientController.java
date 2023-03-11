@@ -25,7 +25,7 @@ public class PatientController {
 
     @GetMapping("/patient-dashboard")
     public String showDashboard(Model model, long id) {
-        currUser = userRepository.findById(id);
+        currUser = userRepository.findById(id).get();
         List<Record> recordsList = recordRepository.findByPatient(currUser);
         model.addAttribute("currUser", currUser);
         model.addAttribute("recordsList", recordsList);
@@ -36,8 +36,8 @@ public class PatientController {
     /* */
 
     @GetMapping("/addRecord")
-    public String addRecord(Model model, int painLevel, int id) {
-        Record newRecord = new Record(userRepository.findById(id), painLevel);
+    public String addRecord(Model model, int painLevel, Long id) {
+        Record newRecord = new Record(userRepository.findById(id).get(), painLevel);
         recordRepository.save(newRecord);
         return "checkmark_temp.html";
     }

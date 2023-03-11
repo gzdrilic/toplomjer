@@ -26,9 +26,9 @@ public class DoctorController {
     //Ovdje pretpostavljam da ce svi doktori imati ovlasti vidjeti sve pacijente i njihove zapise
 
     @GetMapping("/doctor-dashboard")
-    public String showDashboard(Model model, long id) {
-        currUser = userRepository.findById(id);
-        List<User> patientList = userRepository.findByPermissionlevel(1);
+    public String showDashboard(Model model, Long id) {
+        currUser = userRepository.findById(id).get();
+        List<User> patientList = userRepository.findByPermissionLevel(1);
         model.addAttribute("currUser", currUser);
         model.addAttribute("patientList", patientList);
         return "doctor-dashboard.html";
@@ -36,8 +36,8 @@ public class DoctorController {
 
 
     @GetMapping("/showPatientRecords")
-    public String showPatientRecords(Model model, long id) {
-        User currSelectedPatient = userRepository.findById(id);
+    public String showPatientRecords(Model model, Long id) {
+        User currSelectedPatient = userRepository.findById(id).get();
         List<Record> recordsList = recordRepository.findByPatient(currSelectedPatient);
         model.addAttribute("currUser", currUser);
         model.addAttribute("currPatient", currSelectedPatient);
