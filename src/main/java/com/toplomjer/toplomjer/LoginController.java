@@ -16,7 +16,6 @@ public class LoginController {
     UserRepository userRepository;
 
     @Autowired
-    RecordRepository recordRepository;
 
     @GetMapping("/")
     public String showLogin(Model model) {
