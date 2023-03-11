@@ -1,6 +1,5 @@
 package com.toplomjer.toplomjer;
 
-import com.toplomjer.toplomjer.model.RecordRepository;
 import com.toplomjer.toplomjer.model.User;
 import com.toplomjer.toplomjer.model.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,6 @@ public class LoginController {
     @Autowired
     UserRepository userRepository;
 
-    @Autowired
 
     @GetMapping("/")
     public String showLogin(Model model) {
