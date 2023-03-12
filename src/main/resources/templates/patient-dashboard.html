@@ -19,12 +19,12 @@
     background: linear-gradient(45deg, rgba(2,0,36,0.2) 0%, rgba(63,113,61,0.2) 35%, rgba(0,212,255,0.2) 100%);">
 <div class="container" style="min-height:calc(100vh - 24px); text-align: center;">
     <div class="row" style="justify-content: space-between;">
-        <div class="col-lg-1 col-md-4 mt-4">
-            <img src="toplomjer-final.png" alt="toplomjer" height="124px" width="70px">
+        <div class="col-auto mt-4">
+            <img src="toplomjer-final.png" alt="toplomjer" height="124px" width="70px" class="img-fluid">
         </div>
 
-        <div class="col-lg-1 col-md-4 mt-4" style="float:right; font-weight: bold; justify-content: baseline;" >
-            <img src="user2.png" alt="user_logo"  style="width: 100%;">
+        <div class="col-auto mt-4" style="font-weight: bold;" >
+            <img src="user2.png" alt="user_logo"  height="100px" width="100px" class="img-fluid">
             <div th:text="${currUser.firstName} + ' '  + ${currUser.lastName}" class="col mt-3"></div>
         </div>
     </div>
