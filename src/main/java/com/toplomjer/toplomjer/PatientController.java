@@ -24,7 +24,7 @@ public class PatientController {
     User currUser;
 
     @GetMapping("/patient-dashboard")
-    public String showDashboard(Model model, long id) {
+    public String showDashboard(Model model, Long id) {
         currUser = userRepository.findById(id).get();
         List<Record> recordsList = recordRepository.findByPatient(currUser);
         model.addAttribute("currUser", currUser);
@@ -32,6 +32,10 @@ public class PatientController {
         return "patient-dashboard.html";
     }
 
+    @GetMapping("/form-1")
+    public String showForm1(Model model, Long id) {
+        return "fdjfdslf.html";
+    }
 
     /* */
 
