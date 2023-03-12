@@ -24,7 +24,7 @@ public class LoginController {
     public String processLogin(Model model, String username, String password) {
 
         //temp
-        if (username.equals("emoji") && password.equals("emoji")) {
+        if (username.toLowerCase().equals("emoji") && password.toLowerCase().equals("emoji")) {
             return "emojis_slider.html";
         }
         User currUser = userRepository.findByUsernameAndPassword(username, password);
