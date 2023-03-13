@@ -25,7 +25,7 @@ public class LoginController {
 
         //temp
         if (username.toLowerCase().equals("emoji") && password.toLowerCase().equals("emoji")) {
-            return "emojis_slider.html";
+            return "form-1.html";
         }
         User currUser = userRepository.findByUsernameAndPassword(username, password);
         if ( currUser != null) {

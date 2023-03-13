@@ -32,9 +32,24 @@ public class PatientController {
         return "patient-dashboard.html";
     }
 
+    //forma za emoji osjecaja
     @GetMapping("/form-1")
     public String showForm1(Model model, Long id) {
-        return "fdjfdslf.html";
+        currUser = userRepository.findById(id).get();
+        model.addAttribute("currUser", currUser);
+        return "form-1.html";
+    }
+
+    //forma za razinu boli
+    @GetMapping("/form-2")
+    public String showForm2(Model model, Long id, int emotionLevel) {
+        return "form-2.html";
+    }
+
+    //forma za unos teksta ako pacijenti zele, neobavezno, ovdje se nalazi form koji submite na server
+    @GetMapping("/form-3")
+    public String showForm3(Model model, Long id, int emotionLevel, int painLevel) {
+        return "form-3.html";
     }
 
     /* */
