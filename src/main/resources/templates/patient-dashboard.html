@@ -12,6 +12,20 @@
             crossorigin="anonymous"></script>
     <script type="text/javascript" src=""></script>
     <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        .button-next{
+    margin: 32px 32px 0px 32px;
+    padding: 1rem;
+    border-color:white;
+    font-weight: 400;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    background-color: #008000;
+    color: rgb(255,255,255);
+}
+
+    </style>
     <title>Toplomjer</title>
 </head>
 <body style="background: rgb(2,0,36);
@@ -37,7 +51,7 @@
 
     <div class="row justify-content-center align-items-center">
         <div class="col-lg-4 col-md-8">
-            <button th:onclick="|window.location.href = '/form-1?id=${currUser.id}'|" type="button" class="btn btn-success mt-5 p-3" style="background-color: #008000; font-weight: bold;">NOVI ZAPIS</button>
+            <button th:onclick="|window.location.href = '/form-1?id=${currUser.id}'|" type="button" class="button-next" >NOVI ZAPIS</button>
 
         </div>
     </div>
