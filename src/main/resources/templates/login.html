@@ -17,24 +17,30 @@
         input {
             text-align: center;
         }
+        label{
+                 font-size: 1.5rem;
+
+        }
 
         .container {
 
-            min-height: 100vh;
+         min-height:calc(100vh - 24px);
+         text-align: center;
+
         }
         .form-control:focus {
-            border-color: #008000;
-            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 8px rgba(0, 255, 0, 0.6);
+            border-color: rgb(0,255,0);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 255, 0, 0.6);
         }
        
     </style>
     <title>Toplomjer</title>
 </head>
 
-<body style="text-align: center;">
-
-    <div class="container" style="background: rgb(2,0,36);
+<body  style="text-align:center; background: rgb(2,0,36);
     background: linear-gradient(45deg, rgba(2,0,36,0.2) 0%, rgba(63,113,61,0.2) 35%, rgba(0,212,255,0.2) 100%);">
+
+    <div class="container" >
         
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-4 col-md-8">
@@ -63,8 +69,8 @@
 
 
                     </div>
-                    <button type="submit" class="btn btn-block mb-5"
-                        style="font-size: 2em; background-color: #008000;">Prijava</button>
+                    <button type="submit" class="btn btn-block mb-2"
+                        style="font-size: 2em; background-color: #008000;color:rgb(240, 248, 255);">Prijava</button>
                 </form>
             
 
@@ -76,6 +82,7 @@
 
     </div>
 
+    <footer style = "text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top:32px" >@Toplomjer 2023 Health IT. All rights reserved.</footer>
 
 
 </body>
