@@ -4,6 +4,7 @@ import com.toplomjer.toplomjer.model.User;
 import com.toplomjer.toplomjer.model.UserRepository;
 import com.toplomjer.toplomjer.model.Record;
 import com.toplomjer.toplomjer.model.RecordRepository;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -34,15 +35,33 @@ public class PatientController {
 
     //forma za emoji osjecaja
     @GetMapping("/form-1")
-    public String showForm1(Model model, Long id) {
+    public String showForm1(Model model, Long id, HttpSession session) {
         currUser = userRepository.findById(id).get();
         model.addAttribute("currUser", currUser);
+
+        Record record = new Record();
+        record.setEmotionLevel(3);
+        session.setAttribute("record", record);
+
         return "form-1.html";
     }
 
     //forma za razinu boli
     @GetMapping("/form-2")
-    public String showForm2(Model model, Long id, int emotionLevel) {
+    public String showForm2(Model model, int emotionLevel, HttpSession session) {
+        Record record = (Record) session.getAttribute("record");
+        if (emotionLevel < 20) {
+            record.setEmotionLevel(1);
+
+        } else {
+            record.setEmotionLevel(2);
+        } else {
+
+        }
+
+
+        recordRepository.save(record);
+        System.out.println(record);
         return "form-2.html";
     }
 
