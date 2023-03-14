@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
     <link rel="stylesheet" href="style.css">
 
@@ -31,15 +32,19 @@
             <li><img src="emoji5.png" alt=""></li>
         </ul>
     </div>
+
     <div class="slider">
         <div class="thumb"><span></span></div>
         <div class="progress-bar"></div>
-        <input type="range" min="0" value="50" max="100">
+        <form action="form-2">
+            <input type="range" name = "emotionLevel" min="0" value="50" max="100">
+
     </div>
 
 
+    <button type="submit" class="button-next">NASTAVI</button>
+    </form>
 
-    <button type="button" class="button-next">NASTAVI</button>
 </div>
 
 

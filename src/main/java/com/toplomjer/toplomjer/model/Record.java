@@ -33,7 +33,6 @@ public class Record {
     }
 
     public Record(User patient, int painLevel, int emotionLevel, String text) {
-        this.date = new Date();
         this.patient = patient;
         this.painLevel = painLevel;
         this.emotionLevel = emotionLevel;

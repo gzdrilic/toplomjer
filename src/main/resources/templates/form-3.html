@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    <title>Toplomjer</title>
+</head>
+<body oncontextmenu="return false" class="snippet-body like">
+<div class="wrapper">
+
+    <p th:text = "'Bok ' + ${currUser.firstName} + '!'" style="margin-bottom: 32px; font-size: 1.2rem;">
+        <form action="form-end">
+    <label for = "text">Kratki opis stanja</label>
+    <textarea id="text" name="text" rows="5"
+              placeholder="Unesi ovdje..."></textarea>
+    <button class="button-next" type="submit">OVDJE</button>
+</form>
+
+
+</div>
+
+</body>
+</html>
