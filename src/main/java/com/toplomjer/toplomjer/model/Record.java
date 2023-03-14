@@ -2,6 +2,8 @@ package com.toplomjer.toplomjer.model;
 
 import jakarta.persistence.*;
 
+import java.util.Date;
+
 @Entity
 public class Record {
 
@@ -22,23 +24,21 @@ public class Record {
 
     private String text;
 
+    private Date date;
+
 
 
     public Record() {
 
     }
 
-    public Record(User patient) {
-        this.patient = patient;
-        this.painLevel = 0;
-    }
-
-    public Record(User patient, int painLevel) {
+    public Record(User patient, int painLevel, int emotionLevel, String text) {
+        this.date = new Date();
         this.patient = patient;
         this.painLevel = painLevel;
-
+        this.emotionLevel = emotionLevel;
+        this.text = text;
     }
-
 
     public User getPatient() {
         return patient;
@@ -78,5 +78,13 @@ public class Record {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
