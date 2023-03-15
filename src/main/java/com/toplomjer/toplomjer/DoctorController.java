@@ -35,6 +35,18 @@ public class DoctorController {
     }
 
 
+    /*  // PALLIATIVE TEAM METHODS
+    @GetMapping("/users")
+    public String showUsers(Model model) {
+        model.addAttribute(userRepository.findByType(0));
+        return "palliativeTeam_patients.html";
+       // tu sam sama napravila prvo svoj template, al je izbrisan, pa sam napravila
+       novi doctor-dashboard, ali taj se ne spaja na bazu
+
+        return "doctor-dashboard.html";
+    }
+*/
+
     @GetMapping("/showPatientRecords")
     public String showPatientRecords(Model model, Long id) {
         User currSelectedPatient = userRepository.findById(id).get();
