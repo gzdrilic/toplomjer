@@ -10,14 +10,15 @@
     <title>Toplomjer</title>
 </head>
 <body oncontextmenu="return false" class="snippet-body like">
-<div class="wrapper">
+<div class="wrapper" style="align-items:center; text-align:center;">
 
     <p th:text = "'Bok ' + ${currUser.firstName} + '!'" style="margin-bottom: 32px; font-size: 1.2rem;">
         <form action="form-end">
-    <label for = "text">Kratki opis stanja</label>
+    <label for = "text" >Kratki opis stanja</label>
     <textarea id="text" name="text" rows="5"
-              placeholder="Unesi ovdje..."></textarea>
-    <button class="button-next" type="submit">OVDJE</button>
+              placeholder="Unesi ovdje..." style="width:100%; margin-top:16px;
+"></textarea>
+    <button class="button-next" type="submit">Završi</button>
 </form>
 
 

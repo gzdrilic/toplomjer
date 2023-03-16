@@ -51,16 +51,16 @@ public class PatientController {
     public String showForm2(Model model, int emotionLevel, HttpSession session) {
         Record record = (Record) session.getAttribute("record");
         if (emotionLevel < 20) {
-            record.setEmotionLevel(1);
+            record.setHappinessLevel(1);
 
         } else if(emotionLevel < 40){
-            record.setEmotionLevel(2);
+            record.setHappinessLevel(2);
         } else if(emotionLevel < 60){
-            record.setEmotionLevel(3);
+            record.setHappinessLevel(3);
         }else if(emotionLevel < 80){
-            record.setEmotionLevel(4);
+            record.setHappinessLevel(4);
         }else {
-            record .setEmotionLevel(5);
+            record .setHappinessLevel(5);
         }
         record.setDate(new Date());
         model.addAttribute("currUser", record.getPatient());
@@ -68,6 +68,25 @@ public class PatientController {
     }
 
     //forma za unos teksta ako pacijenti zele, neobavezno, ovdje se nalazi form koji submite na server
+
+    @GetMapping("/form-21")
+    public String showForm21(Model model, HttpSession session) {
+        Record record = (Record) session.getAttribute("record");
+        model.addAttribute("currUser", record.getPatient());
+        return "form-21.html";
+    }
+    @GetMapping("/form-22")
+    public String showForm22(Model model, HttpSession session) {
+        Record record = (Record) session.getAttribute("record");
+        model.addAttribute("currUser", record.getPatient());
+        return "form-22.html";
+    }
+    @GetMapping("/form-23")
+    public String showForm23(Model model, HttpSession session) {
+        Record record = (Record) session.getAttribute("record");
+        model.addAttribute("currUser", record.getPatient());
+        return "form-23.html";
+    }
     @GetMapping("/form-3")
     public String showForm3(Model model, int painLevel, HttpSession session) {
         Record record = (Record) session.getAttribute("record");
@@ -79,7 +98,7 @@ public class PatientController {
     public String formEnd(Model model, String text, HttpSession session) {
         Record record = (Record) session.getAttribute("record");
         record.setText(text);
-        record.setDate(new Date());
+        record.setDate(new Date(System.currentTimeMillis() - 3600 * 1000));
         recordRepository.save(record);
         return "redirect:/patient-dashboard?id=" + record.getPatient().getId();
 

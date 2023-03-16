@@ -20,7 +20,7 @@ public class Record {
 
     private int painLevel;
 
-    private int emotionLevel;
+    private int happinessLevel;
 
     private String text;
 
@@ -32,10 +32,10 @@ public class Record {
 
     }
 
-    public Record(User patient, int painLevel, int emotionLevel, String text) {
+    public Record(User patient, int painLevel, int happinessLevel, String text) {
         this.patient = patient;
         this.painLevel = painLevel;
-        this.emotionLevel = emotionLevel;
+        this.happinessLevel = happinessLevel;
         this.text = text;
     }
 
@@ -63,12 +63,12 @@ public class Record {
         this.id = id;
     }
 
-    public int getEmotionLevel() {
-        return emotionLevel;
+    public int getHappinessLevel() {
+        return happinessLevel;
     }
 
-    public void setEmotionLevel(int emotionLevel) {
-        this.emotionLevel = emotionLevel;
+    public void setHappinessLevel(int happinessLevel) {
+        this.happinessLevel = happinessLevel;
     }
 
     public String getText() {

@@ -13,25 +13,17 @@
 <div class="wrapper">
 
 
-    <p th:text = "'Bok ' + ${currUser.firstName} + '!'" style="margin-bottom: 32px; font-size: 1.2rem;">
-    </p>
     <p style="margin-bottom: 32px; text-align:center">
-        Oznaci razinu boli koju trenutno osjecas
+        Osjecate li bol?
     </p>
 
 
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=0'|" class="button-pain">0</button>
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=1'|" class="button-pain">1</button>
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=2'|" class="button-pain">2</button>
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=3'|" class="button-pain">3</button>
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=4'|" class="button-pain">4</button>
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=5'|" class="button-pain">5</button>
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=6'|" class="button-pain">6</button>
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=7'|" class="button-pain">7</button>
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=8'|" class="button-pain">8</button>
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=9'|" class="button-pain">9</button>
-        <button th:onclick = "|window.location.href = '/form-3?painLevel=10'|" class="button-pain">10</button>
+    <button onclick = "window.location.href = '/form-3?painLevel=0'"  style="background-color:#2cba00" class="button-pain">Nema boli</button>
+    <button onclick = "window.location.href = '/form-21'" class="button-pain" style="background-color:#a3ff00">Slaba</button>
+    <button onclick = "window.location.href = '/form-22'" class="button-pain" style="background-color:#fff400">Umjerena</button>
+    <button onclick = "window.location.href = '/form-23'" class="button-pain" style="background-color:#ff0000">Teška</button>
 
+    <button class="button-legenda">Legenda</button>
 </div>
 
 </body>

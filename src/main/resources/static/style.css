@@ -178,18 +178,33 @@ body.like .thumb span {
     border-radius: 0.375rem;
     font-size: 1rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    background-color: #008000;
-    color: rgb(255,255,255);
+    background-color: #2cba00;
+    color: white;
+
 }
 .button-pain{
     margin: 16px 32px 0px 32px;
     padding: 0.3rem;
     border-color:white;
-    font-weight: 400;
     border-radius: 0.375rem;
     font-size: 1rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    background-color: #008000;
-    color: rgb(255,255,255);
+    background-color: #a3ff00;
+    color: white;
+    font-weight:bold;
     width: 100%;
+
+
 }
+.button-legenda{
+width:100%;
+    margin: 32px 32px 0px 32px;
+        padding: 0.3rem;
+            font-weight: 400;
+                border-radius: 0.375rem;
+                    font-size: 0.8rem;
+    background-color: #dcdcdc;
+    width: 50%;
+
+}
+
