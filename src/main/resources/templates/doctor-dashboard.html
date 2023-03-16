@@ -29,13 +29,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="user : ${userList}">
+        <tr th:each="user : ${patientList}">
             <td th:text="${user.id}"></td>
             <td th:text="${user.firstName}"></td>
             <td th:text="${user.lastName}"></td>
-            <td th:text="${user.oib}"></td>
-            <td><a th:href="@{'/deletePatient?id=' + ${user.id}}" onclick="return confirm('Da li ste sigurni?');">Izbriši</a></td>
-            <td><a th:href="@{'/showRecordsForUser?userId=' + ${user.id}}">Pregledaj</a></td>
         </tr>
         </tbody>
     </table>
