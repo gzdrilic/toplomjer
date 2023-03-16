@@ -23,10 +23,7 @@ public class LoginController {
     @GetMapping("/login")
     public String processLogin(Model model, String username, String password) {
 
-        //temp
-        if (username.toLowerCase().equals("emoji") && password.toLowerCase().equals("emoji")) {
-            return "form-1.html";
-        }
+
         User currUser = userRepository.findByUsernameAndPassword(username, password);
         if ( currUser != null) {
             if (currUser.getPermissionLevel() == 1) {
