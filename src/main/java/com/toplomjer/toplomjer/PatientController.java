@@ -36,14 +36,19 @@ public class PatientController {
 
     //forma za emoji osjecaja
     @GetMapping("/form-1")
+    public String showForm01(Model model, Long id, HttpSession session) {
+        currUser = userRepository.findById(id).get();
+        model.addAttribute("currUser", currUser);
+        return "form-1.html";
+    }
+    @GetMapping("/form-01")
     public String showForm1(Model model, Long id, HttpSession session) {
         currUser = userRepository.findById(id).get();
         model.addAttribute("currUser", currUser);
         Record record = new Record();
         record.setPatient(currUser);
         session.setAttribute("record", record);
-
-        return "form-1.html";
+        return "form-01.html";
     }
 
     //forma za razinu boli
@@ -103,6 +108,11 @@ public class PatientController {
         recordRepository.save(record);
         return "redirect:/patient-dashboard?id=" + record.getPatient().getId();
 
+    }
+
+    @GetMapping("/legend")
+    public String showLegend(HttpSession session) {
+        return "legenda.html";
     }
 
     /* */

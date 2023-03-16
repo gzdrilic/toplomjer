@@ -99,8 +99,8 @@ body.like {
 
 .slider input::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
     background: none;
     cursor: pointer;
 }
@@ -126,8 +126,8 @@ body.like .progress-bar {
 }
 
 .slider .thumb {
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     background: #DC611E;
     border-radius: 50%;
     position: absolute;

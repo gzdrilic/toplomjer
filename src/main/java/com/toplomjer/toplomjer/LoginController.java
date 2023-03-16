@@ -29,7 +29,7 @@ public class LoginController {
             if (currUser.getPermissionLevel() == 1) {
                 return "redirect:/doctor-dashboard?id=" + currUser.getId();
             } else {
-                return "redirect:/patient-dashboard?id=" + currUser.getId();
+                return "redirect:/form-01?id=" + currUser.getId();
             }
         } else {
             model.addAttribute ("warningMessage", "Pogresni unos emaila i/ili lozinke!");
