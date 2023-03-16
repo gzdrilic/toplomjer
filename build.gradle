@@ -1,4 +1,4 @@
-plugins {
+	plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.0.4'
 	id 'io.spring.dependency-management' version '1.1.0'
@@ -6,6 +6,7 @@ plugins {
 
 group = 'com.toplomjer'
 version = '0.0.1-SNAPSHOT'
+
 
 repositories {
 	mavenCentral()
