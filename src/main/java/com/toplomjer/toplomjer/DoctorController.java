@@ -28,7 +28,7 @@ public class DoctorController {
     @GetMapping("/doctor-dashboard")
     public String showDashboard(Model model, Long id) {
         currUser = userRepository.findById(id).get();
-        List<User> patientList = userRepository.findByPermissionLevel(1);
+        List<User> patientList = userRepository.findByPermissionLevel(0);
         model.addAttribute("currUser", currUser);
         model.addAttribute("patientList", patientList);
         return "doctor-dashboard.html";
