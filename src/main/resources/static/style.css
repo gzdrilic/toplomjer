@@ -149,7 +149,9 @@ body.confuse .thumb {
 body.like .thumb {
     background: #DE981F;
 }
-
+body.green .thumb {
+    background: #DA7315;
+}
 .slider .thumb span {
     height: 100%;
     width: 100%;
@@ -173,19 +175,19 @@ body.like .thumb span {
 .button-next{
     margin: 32px 32px 0px 32px;
     padding: 1rem;
-    border-color:white;
     font-weight: 600;
     border-radius: 0.375rem;
     font-size: 1rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     color: white;
     background-color:#6a994e;
+        box-shadow: 2px 4px #888888;
+
 
 }
 .button-pain{
-    margin: 16px 32px 0px 32px;
-    padding: 0.3rem;
-    border-color:white;
+    margin: 16px 32px 16px 32px;
+    padding: 1rem;
     border-radius: 0.375rem;
     font-size: 1rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -193,12 +195,12 @@ body.like .thumb span {
     font-weight: 600;
     color:#222725;
     width: 100%;
+    box-shadow: 2px 4px #888888;
 
 }
 .button-pain2{
-    margin: 16px 32px 0px 32px;
-    padding: 0.3rem;
-    border-color:white;
+    margin: 16px 32px 16px 32px;
+    padding: 1rem;
     border-radius: 0.375rem;
     font-size: 1rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -206,11 +208,12 @@ body.like .thumb span {
     color: white;
     font-weight: 600;
     width: 100%;
+    box-shadow: 2px 4px #888888;
 
 }
 .button-legenda{
 width:100%;
-    margin: 32px 32px 0px 32px;
+    margin: 16px 32px 0px 32px;
         padding: 0.3rem;
             font-weight: 400;
                 border-radius: 0.375rem;

@@ -63,18 +63,18 @@
         <thead class="table-primary">
         <tr>
           <th>Datum i vrijeme</th>
-          <th>Emocionalno stanje</th>
-          <th>Razina boli</th>
+          <th>Razina zadovoljstva(1 - 5)</th>
+          <th>Razina boli (1 - 10)</th>
         </tr>
         </thead>
 
         <!-- to pospojiti -->
 
         <tbody>
-        <tr th:each="">
-          <td th:text=""></td>
-          <td th:text=""></td>
-          <td th:text=""></td>
+        <tr th:each ="user : ${recordList}">
+          <td th:text="${record.date}"></td>
+          <td th:text="${record.happinessLevel}"></td>
+          <td th:text="${record.painLevel}"></td>
         </tr>
         </tbody>
       </table>

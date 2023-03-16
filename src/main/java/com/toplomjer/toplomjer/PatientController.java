@@ -98,7 +98,8 @@ public class PatientController {
     public String formEnd(Model model, String text, HttpSession session) {
         Record record = (Record) session.getAttribute("record");
         record.setText(text);
-        record.setDate(new Date(System.currentTimeMillis() - 3600 * 1000));
+        //Trenutno rjesenje set datea dok je app jos hostan na heroku serveru
+        record.setDate(new Date(System.currentTimeMillis() + 3600 * 1000));
         recordRepository.save(record);
         return "redirect:/patient-dashboard?id=" + record.getPatient().getId();
 
