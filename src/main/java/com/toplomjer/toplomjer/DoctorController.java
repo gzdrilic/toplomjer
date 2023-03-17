@@ -20,6 +20,7 @@ public class DoctorController {
     @Autowired
     RecordRepository recordRepository;
 
+
     User currUser;
 
 

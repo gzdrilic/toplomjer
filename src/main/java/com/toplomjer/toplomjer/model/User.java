@@ -9,9 +9,10 @@ import jakarta.persistence.Id;
 public class User {
 
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
 
     private Long id;
+
 
     // 0 - admin, 1 - pacijent
     private int permissionLevel;
