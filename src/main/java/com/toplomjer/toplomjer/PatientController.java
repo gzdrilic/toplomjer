@@ -36,13 +36,13 @@ public class PatientController {
 
     //forma za emoji osjecaja
     @GetMapping("/form-1")
-    public String showForm01(Model model, Long id, HttpSession session) {
+    public String showForm1(Model model, Long id, HttpSession session) {
         currUser = userRepository.findById(id).get();
         model.addAttribute("currUser", currUser);
         return "form-1.html";
     }
     @GetMapping("/form-01")
-    public String showForm1(Model model, Long id, HttpSession session) {
+    public String showForm01(Model model, Long id, HttpSession session) {
         currUser = userRepository.findById(id).get();
         model.addAttribute("currUser", currUser);
         Record record = new Record();
@@ -106,7 +106,8 @@ public class PatientController {
         //Trenutno rjesenje set datea dok je app jos hostan na heroku serveru
         record.setDate(new Date(System.currentTimeMillis() + 3600 * 1000));
         recordRepository.save(record);
-        return "redirect:/patient-dashboard?id=" + record.getPatient().getId();
+        model.addAttribute("currUser", record.getPatient());
+        return "form-endgreet.html";
 
     }
 
