@@ -10,20 +10,26 @@
     <title>Toplomjer</title>
 </head>
 <body oncontextmenu="return false" class="snippet-body like">
-<div class="wrapper">
+<div class="wrapper" style="font-weight:500">
 
 
-    <p style="margin-bottom: 32px; text-align:center; font-weight:500">
-        Je li prisutna neka bol?
+    <p style="margin-bottom: 32px; font-size: 1rem;">
+        Kakvu bol osjećaš od 1 do 10?
     </p>
 
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=0'|" class="button-pain10" style="background-color:white">0</button>
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=1'|" class="button-pain10" style="background-color:#ccffcc">1</button>
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=2'|" class="button-pain10" style="background-color:#ccff99">2</button>
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=3'|" class="button-pain10" style="background-color:#ffff99">3</button>
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=4'|" class="button-pain10"style="background-color:#99ff99">4</button>
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=5'|" class="button-pain10" style="background-color:#dcd828">5</button>
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=6'|" class="button-pain10" style="background-color:#ffff47">6</button>
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=7'|" class="button-pain10" style="background-color:#fabf8f">7</button>
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=8'|" class="button-pain10" style="background-color:#ffc000">8</button>
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=9'|" class="button-pain10" style="background-color:#ff9900">9</button>
+        <button th:onclick = "|window.location.href = '/form-3?painLevel=10'|" class="button-pain10" style="background-color:#ff6600">10</button>
+    <button class = "button-legenda">Legenda</button>
 
-    <button onclick = "window.location.href = '/form-3?painLevel=0'"  style="background-color:#2cba00" class="button-pain">Nema boli</button>
-    <button onclick = "window.location.href = '/form-21'" class="button-pain" style="background-color:#a3ff00">Slaba</button>
-    <button onclick = "window.location.href = '/form-22'" class="button-pain" style="background-color:#fff400">Umjerena</button>
-    <button onclick = "window.location.href = '/form-23'" class="button-pain" style="background-color:#ff0000">Teška</button>
-
-    <button class="button-legenda" onclick="window.location.href='/showLegend'">Legenda</button>
 </div>
 
 </body>
