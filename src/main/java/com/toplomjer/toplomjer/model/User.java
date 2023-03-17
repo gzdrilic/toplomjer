@@ -2,6 +2,7 @@ package com.toplomjer.toplomjer.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity(name = "APP_USER")
@@ -34,6 +35,7 @@ public class User {
         this.password = password;
         this.permissionLevel = permissionLevel;
     }
+
 
     public String getFirstName() {
         return firstName;
@@ -85,8 +87,10 @@ public class User {
 
     @Override
     public String toString() {
-        return "Patient{" +
-                "firstName='" + firstName + '\'' +
+        return "User{" +
+                "id=" + id +
+                ", permissionLevel=" + permissionLevel +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +

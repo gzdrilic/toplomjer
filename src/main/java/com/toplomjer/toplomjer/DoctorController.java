@@ -34,6 +34,19 @@ public class DoctorController {
         return "doctor-dashboard.html";
     }
 
+    @GetMapping("/newPatient")
+    public String addPatient(Model model, Long id) {
+        currUser = userRepository.findById(id).get();
+        model.addAttribute("currUser", currUser);
+        return "add_patient.html";
+    }
+
+
+    @GetMapping("/savePatient")
+    public String savePatient(String firstName, String lastName, String username, String password) {
+        userRepository.save(new User(firstName, lastName, username, password, 0));
+        return "redirect:/doctor-dashboard?id=" + currUser.getId();
+    }
 
     /*  // PALLIATIVE TEAM METHODS
     @GetMapping("/users")
