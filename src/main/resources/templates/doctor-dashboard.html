@@ -24,13 +24,15 @@
             <th>Ime</th>
             <th>Prezime</th>
 
+
         </tr>
         </thead>
         <tbody>
-        <tr th:each="user : ${patientList}">
-            <td th:text="${user.id}"></td>
-            <td th:text="${user.firstName}"></td>
-            <td th:text="${user.lastName}"></td>
+        <tr th:each="patient : ${patientList}">
+            <td th:text="${patient.id}"></td>
+            <td th:text="${patient.firstName}"></td>
+            <td th:text="${patient.lastName}"></td>
+            <td><a th:href="@{'/showRecords?id=' + ${patient.id}}">Pregled</a></td>
         </tr>
         </tbody>
     </table>

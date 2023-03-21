@@ -61,14 +61,14 @@ public class DoctorController {
     }
 */
 
-    @GetMapping("/showPatientRecords")
+    @GetMapping("/showRecords")
     public String showPatientRecords(Model model, Long id) {
         User currSelectedPatient = userRepository.findById(id).get();
-        List<Record> recordsList = recordRepository.findByPatient(currSelectedPatient);
+        List<Record> recordList = recordRepository.findByPatient(currSelectedPatient);
         model.addAttribute("currUser", currUser);
         model.addAttribute("currPatient", currSelectedPatient);
-        model.addAttribute("recordsList", recordsList);
-        return "patient-records.html";
+        model.addAttribute("recordList", recordList);
+        return "patient_records.html";
     }
 
 
