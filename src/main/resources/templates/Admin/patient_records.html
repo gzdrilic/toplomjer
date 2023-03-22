@@ -12,13 +12,32 @@
 <br><br>
 <div class="container">
   <nav class="navbar">
-    <h1>Emocionalni toplomjer</h1>
-    <img src="img.png" alt="" width="70" height="72" />
+    <h1><img src="logo.png" alt="" width="70" height="72" />Emocionalni toplomjer</h1>
+    <img src="loginikona.png" alt="" width="70" height="72" />
 
   </nav>
 
+
+  <div>
+    <p>
+      <span>Ime: </span> <span th:text="${user.firstName}"> Mirko  </span>
+    </p>
+
+    <p>
+      <span>Prezime: </span> <span th:text="${user.lastName}">  Mirić </span>
+    </p>
+
+    <p>
+      <span>Email: </span> <span th:text="${user.email}"> mirko@mail.com </span>
+    </p>
+  </div>
+  <br/>
+
+
+
+
   <table id="todoTable" class="table table-hover">
-    <thead class="table-primary">
+    <thead class="table-secondary">
     <tr>
       <th>Datum</th>
       <th>Raspolozenje(1-5)</th>

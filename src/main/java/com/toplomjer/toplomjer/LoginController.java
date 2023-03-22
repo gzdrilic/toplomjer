@@ -25,6 +25,7 @@ public class LoginController {
 
 
         User currUser = userRepository.findByUsernameAndPassword(username, password);
+
         if ( currUser != null) {
             if (currUser.getPermissionLevel() == 1) {
                 return "redirect:/doctor-dashboard?id=" + currUser.getId();

@@ -39,7 +39,7 @@ public class DoctorController {
     public String addPatient(Model model, Long id) {
         currUser = userRepository.findById(id).get();
         model.addAttribute("currUser", currUser);
-        return "add_patient.html";
+        return "add_new_patient.html";
     }
 
 
