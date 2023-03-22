@@ -12,13 +12,13 @@
 <br><br>
 <div class="container">
     <nav class="navbar">
-        <h1>Emocionalni toplomjer</h1>
-        <img src="img.png" alt="" width="70" height="72" />
+        <h1> <img src="logo.png" alt="" width="70" height="72" />Emocionalni toplomjer </h1>
+        <img src="img.png" alt="" width="70" height="72"/>
 
     </nav>
 
     <table id="todoTable" class="table table-hover">
-        <thead class="table-primary">
+        <thead class="table-secondary">
         <tr>
             <th>rb.</th>
             <th>Ime</th>
@@ -35,7 +35,7 @@
         </tbody>
     </table>
 
-    <button class="btn btn-primary" name="button" th:onclick="|window.location.href = '/newPatient?id=${currUser.id}'|  ">Dodaj novog pacijenta</button>
+    <button class="btn btn-secondary" name="button" th:onclick="|window.location.href = '/newPatient?id=${currUser.id}'|  ">Dodaj novog pacijenta</button>
 </div>
 
 </body>

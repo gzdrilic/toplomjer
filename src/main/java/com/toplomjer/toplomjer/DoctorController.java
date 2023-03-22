@@ -31,7 +31,7 @@ public class DoctorController {
         List<User> patientList = userRepository.findByPermissionLevel(0);
         model.addAttribute("currUser", currUser);
         model.addAttribute("patientList", patientList);
-        return "doctor-dashboard.html";
+        return "doctor_dashboard.html";
     }
 
     @GetMapping("/newPatient")
@@ -56,7 +56,7 @@ public class DoctorController {
        // tu sam sama napravila prvo svoj template, al je izbrisan, pa sam napravila
        novi doctor-dashboard, ali taj se ne spaja na bazu
 
-        return "doctor-dashboard.html";
+        return "doctor_dashboard.html";
     }
 */
 
