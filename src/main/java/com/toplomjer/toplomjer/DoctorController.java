@@ -44,8 +44,8 @@ public class DoctorController {
 
 
     @GetMapping("/savePatient")
-    public String savePatient(String firstName, String lastName, String username, String password) {
-        userRepository.save(new User(firstName, lastName, username, password, 0));
+    public String savePatient(String firstName, String lastName, String username, String password, String address, String phoneNumber) {
+        userRepository.save(new User(firstName, lastName, username, password, address, phoneNumber, 0));
         return "redirect:/doctor-dashboard?id=" + currUser.getId();
     }
 

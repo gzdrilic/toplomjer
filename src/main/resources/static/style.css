@@ -205,7 +205,6 @@ body.like .thumb span {
     font-size: 1rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     background-color: #a3ff00;
-    color: white;
     font-weight: 600;
     width: 100%;
     box-shadow: 2px 4px #888888;
