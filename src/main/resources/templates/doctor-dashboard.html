@@ -23,6 +23,7 @@
             <th>rb.</th>
             <th>Ime</th>
             <th>Prezime</th>
+            <th>Zapisi</th>
 
 
         </tr>
@@ -32,6 +33,7 @@
             <td th:text="${patient.id}"></td>
             <td th:text="${patient.firstName}"></td>
             <td th:text="${patient.lastName}"></td>
+
             <td><a th:href="@{'/showRecords?id=' + ${patient.id}}">Pregled</a></td>
         </tr>
         </tbody>
