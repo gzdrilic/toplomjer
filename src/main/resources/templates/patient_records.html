@@ -20,33 +20,29 @@
 
   <div>
     <p>
-      <span>Ime: </span> <span th:text="${user.firstName}"> Mirko  </span>
+      <span>Ime: </span> <span th:text="${currPatient.firstName}"></span>
     </p>
 
     <p>
-      <span>Prezime: </span> <span th:text="${user.lastName}">  Mirić </span>
+      <span>Prezime: </span> <span th:text="${currPatient.lastName}"></span>
     </p>
 
     <p>
-      <span>Email: </span> <span th:text="${user.email}"> mirko@mail.com </span>
+      <span>Email: </span> <span th:text="${currPatient.email}"> </span>
     </p>
   </div>
   <br/>
 
-
-
-
-  <table id="todoTable" class="table table-hover">
+  <table id="recordTable" class="table table-hover">
     <thead class="table-secondary">
     <tr>
       <th>Datum</th>
       <th>Raspolozenje(1-5)</th>
       <th>Razina boli(0-10)</th>
       <th>Opis stanja</th>
-
-
     </tr>
     </thead>
+
     <tbody>
     <tr th:each="record : ${recordList}">
       <td th:text="${#dates.format(record.date, 'dd.MM.yyyy')}"></td>
@@ -58,6 +54,28 @@
   </table>
 
 </div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer style = "text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;" >@Toplomjer 2023 Health IT. All rights reserved.</footer>
 
 </body>
 </html>

@@ -29,18 +29,37 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="patient : ${patientList}">
-            <td th:text="${patient.id}"></td>
-            <td th:text="${patient.firstName}"></td>
-            <td th:text="${patient.lastName}"></td>
-
-            <td><a th:href="@{'/showRecords?id=' + ${patient.id}}">Pregled</a></td>
+        <tr th:each="currPatient : ${patientList}">
+            <td th:text="${currPatient.id}"></td>
+            <td th:text="${currPatient.firstName}"></td>
+            <td th:text="${currPatient.lastName}"></td>
+            <td><a th:href="@{'/showRecords?id=' + ${currPatient.id}}">Pregled</a></td>
         </tr>
         </tbody>
     </table>
 
     <button class="btn btn-secondary" name="button" th:onclick="|window.location.href = '/newPatient?id=${currUser.id}'|  ">Dodaj novog pacijenta</button>
 </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<footer style = "text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;" >@Toplomjer 2023 Health IT. All rights reserved.</footer>
 
 </body>
 </html>

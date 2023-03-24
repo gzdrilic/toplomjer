@@ -43,23 +43,16 @@ public class DoctorController {
     }
 
 
+
     @GetMapping("/savePatient")
     public String savePatient(String firstName, String lastName, String username, String password, String address, String phoneNumber) {
         userRepository.save(new User(firstName, lastName, username, password, address, phoneNumber, 0));
         return "redirect:/doctor-dashboard?id=" + currUser.getId();
     }
 
-    /*  // PALLIATIVE TEAM METHODS
-    @GetMapping("/users")
-    public String showUsers(Model model) {
-        model.addAttribute(userRepository.findByType(0));
-        return "palliativeTeam_patients.html";
-       // tu sam sama napravila prvo svoj template, al je izbrisan, pa sam napravila
-       novi doctor-dashboard, ali taj se ne spaja na bazu
 
-        return "doctor-dashboard.html";
-    }
-*/
+
+
 
     @GetMapping("/showRecords")
     public String showPatientRecords(Model model, Long id) {
@@ -70,6 +63,5 @@ public class DoctorController {
         model.addAttribute("recordList", recordList);
         return "patient_records.html";
     }
-
 
 }
