@@ -9,9 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 public class PatientController {
@@ -100,9 +102,24 @@ public class PatientController {
         return "form-3.html";
     }
     @GetMapping("/form-end")
-    public String formEnd(Model model, String text, HttpSession session) {
+    public String formEnd(Model model, String text1, String text2, String select_podrska_obitelji, @RequestParam Map<String, String> allParams, HttpSession session) {
+        String newText = text2  + "\n";
         Record record = (Record) session.getAttribute("record");
-        record.setText(text);
+
+
+        newText += "\n\nSelektirano:\n";
+        if(allParams.get("Podrška obitelji") != null)
+            newText += "[Podrška obitelji]\n";
+        if(allParams.get("Podrška medicinskog tima") != null)
+            newText += "[Podrška medicinskog tima]\n";
+        if(allParams.get("Duhovna podrška") != null)
+            newText += "[Duhovna podrška]\n";
+        if(allParams.get("Psihološka podrška") != null)
+            newText += "[Psihološka podrška]\n";
+        if(allParams.get("Lijek") != null)
+            newText += "[Lijek]\n";
+        record.setText(newText);
+
         //Trenutno rjesenje set datea dok je app jos hostan na heroku serveru
         record.setDate(new Date(System.currentTimeMillis() + 3600 * 1000));
         recordRepository.save(record);
