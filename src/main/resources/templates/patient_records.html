@@ -20,33 +20,27 @@
 
   <div>
     <p>
-      <span>Ime: </span> <span th:text="${user.firstName}"> Mirko  </span>
+      <span>Ime: </span> <span th:text="${currPatient.firstName}"></span>
     </p>
 
     <p>
-      <span>Prezime: </span> <span th:text="${user.lastName}">  Mirić </span>
+      <span>Prezime: </span> <span th:text="${currPatient.lastName}"></span>
     </p>
 
-    <p>
-      <span>Email: </span> <span th:text="${user.email}"> mirko@mail.com </span>
-    </p>
+
   </div>
   <br/>
 
-
-
-
-  <table id="todoTable" class="table table-hover">
+  <table id="recordTable" class="table table-hover">
     <thead class="table-secondary">
     <tr>
       <th>Datum</th>
       <th>Raspolozenje(1-5)</th>
       <th>Razina boli(0-10)</th>
       <th>Opis stanja</th>
-
-
     </tr>
     </thead>
+
     <tbody>
     <tr th:each="record : ${recordList}">
       <td th:text="${#dates.format(record.date, 'dd.MM.yyyy')}"></td>
@@ -58,6 +52,21 @@
   </table>
 
 </div>
+
+
+
+
+
+<footer class="text-center text-grey fixed-bottom" style="background-color: white;">
+  <!-- Grid container -->
+  <div class="container p-4"></div>
+  <!-- Grid container -->
+
+  <div class="text-center p-4">
+    © 2023 Copyright:
+    <a class="text-reset fw-bold" href="https://toplomjer.herokuapp.com/">Emocionalni toplomjer Health IT</a>
+  </div>
+</footer>
 
 </body>
 </html>

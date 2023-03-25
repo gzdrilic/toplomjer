@@ -12,9 +12,8 @@
 <br><br>
 <div class="container">
     <nav class="navbar">
-        <h1>Emocionalni toplomjer</h1>
-        <img src="img.png" alt="" width="70" height="72" />
-
+        <h1><img src="logo.png" alt="" width="70" height="72"  /> Emocionalni toplomjer</h1>
+        <img src="loginikona.png" alt="" width="70" height="72" />
     </nav>
 
     <table id="patientTable" class="table table-hover">
@@ -23,22 +22,38 @@
             <th>rb.</th>
             <th>Ime</th>
             <th>Prezime</th>
+            <th>Zapisi</th>
 
 
         </tr>
         </thead>
         <tbody>
-        <tr th:each="patient : ${patientList}">
-            <td th:text="${patient.id}"></td>
-            <td th:text="${patient.firstName}"></td>
-            <td th:text="${patient.lastName}"></td>
-            <td><a th:href="@{'/showRecords?id=' + ${patient.id}}">Pregled</a></td>
+        <tr th:each="currPatient : ${patientList}">
+            <td th:text="${currPatient.id}"></td>
+            <td th:text="${currPatient.firstName}"></td>
+            <td th:text="${currPatient.lastName}"></td>
+            <td><a th:href="@{'/showRecords?id=' + ${currPatient.id}}">Pregled</a></td>
         </tr>
         </tbody>
     </table>
 
     <button class="btn btn-secondary" name="button" th:onclick="|window.location.href = '/newPatient?id=${currUser.id}'|  ">Dodaj novog pacijenta</button>
 </div>
+
+
+
+
+<footer class="text-center text-grey fixed-bottom" style="background-color: white;">
+    <!-- Grid container -->
+    <div class="container p-4"></div>
+    <!-- Grid container -->
+
+    <div class="text-center p-4">
+        © 2023 Copyright:
+        <a class="text-reset fw-bold" href="https://toplomjer.herokuapp.com/">Emocionalni toplomjer Health IT</a>
+    </div>
+</footer>
+
 
 </body>
 </html>
