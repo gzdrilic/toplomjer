@@ -8,8 +8,9 @@ import java.util.Date;
 public class Record {
 
 
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+
     @Id
+    @GeneratedValue
     private Long id;
 
 

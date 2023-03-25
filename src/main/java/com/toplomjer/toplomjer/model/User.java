@@ -8,8 +8,10 @@ import jakarta.persistence.Id;
 @Entity(name = "APP_USER")
 public class User {
 
+
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+
+    @GeneratedValue
 
     private Long id;
 
