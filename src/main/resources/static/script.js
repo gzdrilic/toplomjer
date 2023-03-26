@@ -79,7 +79,7 @@ var checkbox_select = function(params)
 
             if(selected.length == 0)
             {
-                    $_select_anchor.text( select_name )
+                    $_select_anchor.text( "Ovdje izaberi" )
             }
             else if(selected.length == 1)
             {

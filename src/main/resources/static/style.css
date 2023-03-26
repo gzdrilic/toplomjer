@@ -353,8 +353,8 @@ div.checkbox_select .select_input
 
 .checkbox_select_submit
 {
-    background: #2cba00;
-    padding: 0.8rem;
+    background: white;
+    padding: 0.4rem;
     margin-bottom: 2rem;
     width: 100%;
     font-weight:600;

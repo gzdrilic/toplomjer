@@ -102,8 +102,8 @@ public class PatientController {
         return "form-3.html";
     }
     @GetMapping("/form-end")
-    public String formEnd(Model model, String text1, String text2, String select_podrska_obitelji, @RequestParam Map<String, String> allParams, HttpSession session) {
-        String newText = text2  + "\n";
+    public String formEnd(Model model, String text, String select_podrska_obitelji, @RequestParam Map<String, String> allParams, HttpSession session) {
+        String newText = text  + "\n";
         Record record = (Record) session.getAttribute("record");
 
 
