@@ -128,12 +128,6 @@ public class PatientController {
 
     }
 
-    @GetMapping("/legend")
-    public String showLegend(HttpSession session) {
-        return "legenda.html";
-    }
-
-    /* */
 
 
 
