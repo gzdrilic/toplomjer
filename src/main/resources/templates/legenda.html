@@ -43,18 +43,6 @@
 </head>
 <body>
 <div class="container" style="min-height:calc(100vh - 24px); text-align: center;">
-  <div class="row" style="justify-content: space-between;">
-    <div class="col-auto mt-4">
-      <img src="toplomjer-final.png" alt="toplomjer" height="124px" width="70px" class="img-fluid">
-    </div>
-
-    <div class="col-auto mt-4" style="font-weight: bold;" >
-      <img src="user2.png" alt="user_logo"  height="100px" width="100px" class="img-fluid">
-
-      <!-- tu treba preuzeti ime i prezime palijativnog usera, ne znam kak su ti nazivi u kodu -->
-
-    </div>
-  </div>
 
   <div class="row justify-content-center align-items-center">
     <div class="col-lg-4 col-md-8">
@@ -120,10 +108,10 @@
 
 
 
-  <button th:if="${ref == 2}"  th:onclick="|window.location.href = '/form-2?happinessLevel=${record.happinessLevel}'|" class=" button-next">NATRAG U APP</button>
-  <button th:if="${ref == 21}"  onclick="window.location.href = '/form-21'" class= "button-next">NATRAG U APP</button>
-  <button th:if="${ref == 22}"  onclick="window.location.href = '/form-22'" class= "button-next">NATRAG U APP</button>
-  <button th:if="${ref == 23}"  onclick="window.location.href = '/form-23'" class= "button-next">NATRAG U APP</button>
+  <button th:if="${ref == 2}"  th:onclick="|window.location.href = '/form-2?happinessLevel=${record.happinessLevel}'|" class="btn btn-success">NATRAG U APP</button>
+  <button th:if="${ref == 21}"  onclick="window.location.href = '/form-21'" class= "btn btn-success">NATRAG U APP</button>
+  <button th:if="${ref == 22}"  onclick="window.location.href = '/form-22'" class= "btn btn-success">NATRAG U APP</button>
+  <button th:if="${ref == 23}"  onclick="window.location.href = '/form-23'" class= "btn btn-success">NATRAG U APP</button>
 
 </div>
 <footer style = "text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;" >@Toplomjer 2023 Health IT. All rights reserved.</footer>
