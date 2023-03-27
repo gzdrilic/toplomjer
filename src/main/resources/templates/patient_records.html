@@ -60,19 +60,7 @@
 
 
 
-      <td th:text="${record.painLevel}" th:switch = "${record.painLevel}"
-      ><span th:case = "${record.painLevel} == '7'" th:appendstyle = "'background: red'"></span>
-        <span th:case = "${record.painLevel} == '8'" th:appendstyle = "'background: red'"></span>
-        <span th:case = "${record.painLevel} == '9'" th:appendstyle = "'background: red'"></span>
-        <span th:case = "${record.painLevel} == '10'" th:appendstyle = "'background: red'"></span>
-        <span th:case = "${record.painLevel} == '6'" th:appendstyle = "'background: yellow'"></span>
-        <span th:case = "${record.painLevel} == '5'" th:appendstyle = "'background: yellow'"></span>
-        <span th:case = "${record.painLevel} == '4'" th:appendstyle = "'background: green'"></span>
-        <span th:case = "${record.painLevel} == '3'" th:appendstyle = "'background: green'"></span>
-        <span th:case = "${record.painLevel} == '2'" th:appendstyle = "'background: blue'"></span>
-        <span th:case = "${record.painLevel} == '1'" th:appendstyle = "'background: grey'"></span>
-        <span th:case = "${record.painLevel} == '0'" th:appendstyle = "'background: white'"></span>
-      </td>
+      <td th:text="${record.painLevel}" th:switch = "${record.painLevel}"></td>
 
       <td th:text="${record.text}"></td>
     </tr>
