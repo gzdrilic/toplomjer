@@ -24,8 +24,6 @@
             <th>Prezime</th>
             <th>Korisničko ime</th>
             <th>Lozinka</th>
-            <th>Adresa</th>
-            <th>Kontakt broj</th>
             <th>Zapisi</th>
             <th>Izbriši</th>
 
@@ -38,8 +36,6 @@
             <td th:text="${currPatient.lastName}"></td>
             <td th:text="${currPatient.username}"></td>
             <td th:text="${currPatient.password}"></td>
-            <td th:text="${currPatient.address}"></td>
-            <td th:text="${currPatient.phoneNumber}"></td>
             <td><a th:href="@{'/showRecords?id=' + ${currPatient.id}}">Pregled</a></td>
 
             <td><a th:href="@{'/deletePatient?id=' + ${currPatient.id}}" onclick="return confirm('Jeste li sigurni?');">Izbriši</a></td>

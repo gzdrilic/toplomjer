@@ -27,6 +27,15 @@
       <span>Prezime: </span> <span th:text="${currPatient.lastName}"></span>
     </p>
 
+    <p>
+      <span>Adresa: </span> <span th:text="${currPatient.address}"></span>
+    </p>
+
+    <p>
+      <span>Kontakt: </span> <span th:text="${currPatient.phoneNumber}"></span>
+    </p>
+
+
 
   </div>
   <br/>
@@ -35,16 +44,22 @@
     <thead class="table-secondary">
     <tr>
       <th>Datum</th>
-      <th>Raspolozenje(1-5)</th>
-      <th>Razina boli(0-10)</th>
+      <th >Raspolozenje<br>(1-5)</th>
+      <th>Razina boli<br>(0-10)</th>
       <th>Opis stanja</th>
     </tr>
     </thead>
 
     <tbody>
     <tr th:each="record : ${recordList}">
-      <td th:text="${#dates.format(record.date, 'dd.MM.yyyy')}"></td>
+      <td th:text="${#dates.format(record.date, 'yyyy-MM-dd HH:mm')}"></td>
+
+
+
       <td th:text="${record.happinessLevel}"></td>
+
+
+
       <td th:text="${record.painLevel}" th:switch = "${record.painLevel}"
       ><span th:case = "${record.painLevel} == '7'" th:appendstyle = "'background: red'"></span>
         <span th:case = "${record.painLevel} == '8'" th:appendstyle = "'background: red'"></span>
