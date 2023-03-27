@@ -45,10 +45,12 @@ public class PatientController {
     }
     @GetMapping("/form-01")
     public String showForm01(Model model, Long id, String password, HttpSession session) {
-        if (password == null) {
+        currUser = userRepository.findById(id).get();
+        if(password.startsWith("\""))
+            password = password.substring(1, password.length() - 1);
+        if (password == null || !currUser.getPassword().equals(password)) {
             return "";
         }
-        currUser = userRepository.findById(id).get();
         model.addAttribute("currUser", currUser);
         Record record = new Record();
         record.setPatient(currUser);
