@@ -27,6 +27,15 @@
       <span>Prezime: </span> <span th:text="${currPatient.lastName}"></span>
     </p>
 
+    <p>
+      <span>Adresa: </span> <span th:text="${currPatient.address}"></span>
+    </p>
+
+    <p>
+      <span>Kontakt: </span> <span th:text="${currPatient.phoneNumber}"></span>
+    </p>
+
+
 
   </div>
   <br/>
@@ -35,17 +44,24 @@
     <thead class="table-secondary">
     <tr>
       <th>Datum</th>
-      <th>Raspolozenje(1-5)</th>
-      <th>Razina boli(0-10)</th>
+      <th >Raspolozenje<br>(1-5)</th>
+      <th>Razina boli<br>(0-10)</th>
       <th>Opis stanja</th>
     </tr>
     </thead>
 
     <tbody>
     <tr th:each="record : ${recordList}">
-      <td th:text="${#dates.format(record.date, 'dd.MM.yyyy')}"></td>
+      <td th:text="${#dates.format(record.date, 'yyyy-MM-dd HH:mm')}"></td>
+
+
+
       <td th:text="${record.happinessLevel}"></td>
+
+
+
       <td th:text="${record.painLevel}"></td>
+
       <td th:text="${record.text}"></td>
     </tr>
     </tbody>
@@ -54,19 +70,9 @@
 </div>
 
 
+<footer class="text-center text-grey fixed-bottom" >@Toplomjer 2023 Health IT. All rights reserved.</footer>
 
 
-
-<footer class="text-center text-grey fixed-bottom" style="background-color: white;">
-  <!-- Grid container -->
-  <div class="container p-4"></div>
-  <!-- Grid container -->
-
-  <div class="text-center p-4">
-    © 2023 Copyright:
-    <a class="text-reset fw-bold" href="https://toplomjer.herokuapp.com/">Emocionalni toplomjer Health IT</a>
-  </div>
-</footer>
 
 </body>
 </html>

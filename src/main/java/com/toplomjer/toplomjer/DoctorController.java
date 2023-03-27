@@ -43,14 +43,19 @@ public class DoctorController {
     }
 
 
+    @GetMapping("/deletePatient")
+    public String deletePatient (Long id) {
+        User currUser = userRepository.findById (id).get ();
+        userRepository.delete (currUser);
+        return "redirect:/doctor-dashboard";
+    }
+
 
     @GetMapping("/savePatient")
     public String savePatient(String firstName, String lastName, String username, String password, String address, String phoneNumber) {
         userRepository.save(new User(firstName, lastName, username, password, address, phoneNumber, 0));
         return "redirect:/doctor-dashboard?id=" + currUser.getId();
     }
-
-
 
 
 
