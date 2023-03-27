@@ -105,21 +105,21 @@ public class PatientController {
         return "form-3.html";
     }
     @GetMapping("/form-end")
-    public String formEnd(Model model, String text, String select_podrska_obitelji, @RequestParam Map<String, String> allParams, HttpSession session) {
+    public String formEnd(Model model, String text, @RequestParam Map<String, String> allParams, HttpSession session) {
         String newText = text  + "\n";
         Record record = (Record) session.getAttribute("record");
 
 
         newText += "\n\nSelektirano:\n";
-        if(allParams.get("Podrška obitelji") != null)
+        if(allParams.get("\uD83D\uDC6A Podrška obitelji") != null)
             newText += "[Podrška obitelji]\n";
-        if(allParams.get("Podrška medicinskog tima") != null)
+        if(allParams.get("\uD83D\uDC69\u200D⚕️Podrška medicinskog tima") != null)
             newText += "[Podrška medicinskog tima]\n";
-        if(allParams.get("Duhovna podrška") != null)
+        if(allParams.get("\uD83D\uDD6F️ Duhovna podrška") != null)
             newText += "[Duhovna podrška]\n";
-        if(allParams.get("Psihološka podrška") != null)
+        if(allParams.get("\uD83D\uDC69\uD83C\uDFFB\u200D⚕ Psihološka podrška") != null)
             newText += "[Psihološka podrška]\n";
-        if(allParams.get("Lijek") != null)
+        if(allParams.get("\uD83D\uDC8A Lijek") != null)
             newText += "[Lijek]\n";
         record.setText(newText);
 
