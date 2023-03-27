@@ -53,7 +53,6 @@
 
       <!-- tu treba preuzeti ime i prezime palijativnog usera, ne znam kak su ti nazivi u kodu -->
 
-      <div th:text="${currUser.firstName} + ' '  + ${currUser.lastName}" class="col mt-3"></div>
     </div>
   </div>
 
@@ -119,7 +118,13 @@
     </div>
   </div>
 
-  <button class=" button-next" onclick="window.location.href='/'">NATRAG U APP</button>
+
+
+  <button th:if="${ref == 2}"  th:onclick="|window.location.href = '/form-2?happinessLevel=${record.happinessLevel}'|" class=" button-next">NATRAG U APP</button>
+  <button th:if="${ref == 21}"  onclick="window.location.href = '/form-21'" class= "button-next">NATRAG U APP</button>
+  <button th:if="${ref == 22}"  onclick="window.location.href = '/form-22'" class= "button-next">NATRAG U APP</button>
+  <button th:if="${ref == 23}"  onclick="window.location.href = '/form-23'" class= "button-next">NATRAG U APP</button>
+
 </div>
 <footer style = "text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;" >@Toplomjer 2023 Health IT. All rights reserved.</footer>
 

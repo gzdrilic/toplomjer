@@ -55,20 +55,23 @@ public class PatientController {
 
     //forma za razinu boli
     @GetMapping("/form-2")
-    public String showForm2(Model model, int emotionLevel, HttpSession session) {
+    public String showForm2(Model model, int happinessLevel, HttpSession session) {
         Record record = (Record) session.getAttribute("record");
-        if (emotionLevel < 20) {
-            record.setHappinessLevel(1);
+        if (record.getHappinessLevel() == -1) {
+            if (happinessLevel < 20) {
+                record.setHappinessLevel(1);
 
-        } else if(emotionLevel < 40){
-            record.setHappinessLevel(2);
-        } else if(emotionLevel < 60){
-            record.setHappinessLevel(3);
-        }else if(emotionLevel < 80){
-            record.setHappinessLevel(4);
-        }else {
-            record .setHappinessLevel(5);
+            } else if(happinessLevel < 40){
+                record.setHappinessLevel(2);
+            } else if(happinessLevel < 60){
+                record.setHappinessLevel(3);
+            }else if(happinessLevel < 80){
+                record.setHappinessLevel(4);
+            }else {
+                record .setHappinessLevel(5);
+            }
         }
+
         record.setDate(new Date());
         model.addAttribute("currUser", record.getPatient());
         return "form-2.html";
@@ -128,6 +131,13 @@ public class PatientController {
 
     }
 
+    @GetMapping("/showLegend")
+    public String showLegend(Model model, HttpSession session, int ref) {
+        Record record = (Record) session.getAttribute("record");
+        model.addAttribute("record", record);
+        model.addAttribute("ref", ref);
+        return "legenda.html";
+    }
 
 
 

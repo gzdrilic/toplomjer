@@ -207,7 +207,9 @@ body.like .thumb span {
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     font-weight: 600;
     color:#222725;
-    width: 80%;
+    margin-right:16px;
+    margin-left:16px;
+    width: 100%;
 
 }
 
@@ -394,12 +396,11 @@ div.checkbox_select .select_input
 	text-align: center;
 	border: 2px solid #444;
 	border-radius: 50%;
-	width: 40px;
+	width: 26%;
 	height:40px;
 	font-size: 24px;
 	cursor: default;
 	background:white;
-	margin-right: 16px;
 }
 
 .help-tip:before{

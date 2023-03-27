@@ -21,7 +21,7 @@ public class Record {
 
     private int painLevel;
 
-    private int happinessLevel;
+    private int happinessLevel = -1;
 
     private String text;
 
