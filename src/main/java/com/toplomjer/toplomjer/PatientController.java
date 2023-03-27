@@ -44,7 +44,10 @@ public class PatientController {
         return "form-1.html";
     }
     @GetMapping("/form-01")
-    public String showForm01(Model model, Long id, HttpSession session) {
+    public String showForm01(Model model, Long id, String password, HttpSession session) {
+        if (password == null) {
+            return "";
+        }
         currUser = userRepository.findById(id).get();
         model.addAttribute("currUser", currUser);
         Record record = new Record();

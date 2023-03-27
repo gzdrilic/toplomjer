@@ -30,7 +30,7 @@ public class LoginController {
             if (currUser.getPermissionLevel() == 1) {
                 return "redirect:/doctor-dashboard?id=" + currUser.getId();
             } else {
-                return "redirect:/form-01?id=" + currUser.getId();
+                return "redirect:/form-01?id=" + currUser.getId() + "&password=" + password;
             }
         } else {
             model.addAttribute ("warningMessage", "Pogresni unos korisničkog imena i/ili lozinke!");
