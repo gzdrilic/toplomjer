@@ -12,7 +12,20 @@
     <link rel="icon" type="image/png" href="logo.png">
     <title>Toplomjer</title>
 </head>
-<body oncontextmenu="return false" class="snippet-body like">
+<body oncontextmenu="return false" class="snippet-body like" style="display:block">
+
+<div style="display:flex; justify-content:space-between;margin-bottom:24px;">
+    <button onclick="javascript:history.back()" class="wrapper" style="width:25%; max-width: 82px; padding: 8px 8px 8px 8px;">
+        <img src="backarrow_logo.png">
+    </button>
+
+    <button th:onclick="|window.location.href = '/form-01?id=${currUser.id}'|" class="wrapper" style="width:25%; max-width: 82px;padding: 8px 8px 8px 8px;">
+        <img src="home_logo.png">
+    </button>
+
+</div>
+<div style="display:flex; justify-content:center; align-items:center; height:75vh;">
+
 <div class="wrapper">
 
 
@@ -43,6 +56,7 @@
     <button type="submit" class="button-next" style="margin-top:40px">DALJE</button>
     </form>
 
+</div>
 </div>
 
 

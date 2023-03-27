@@ -20,7 +20,7 @@ input {
 }
 
 body {
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -43,7 +43,7 @@ body.like {
 
 .wrapper {
     background: #f6f6f6;
-    padding: 30px 40px 40px;
+    padding: 30px 20px 40px;
     border-radius: 10px;
     max-width: 350px;
     width: 100%;
@@ -208,7 +208,6 @@ body.like .thumb span {
     font-weight: 600;
     color:#222725;
     margin-right:16px;
-    margin-left:16px;
     width: 100%;
     padding: 16px 0 16px 0;
 
@@ -396,7 +395,7 @@ div.checkbox_select .select_input
 	text-align: center;
 	border: 2px solid #444;
 	border-radius: 50%;
-	width: 26%;
+	width: 53px;
 	height:40px;
 	font-size: 24px;
 	cursor: default;
@@ -483,3 +482,14 @@ div.checkbox_select .select_input
     0% { opacity:0; }
     100% { opacity:100%; }
 }
+.flex1{
+padding-bottom:16px;
+display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+.flex2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }

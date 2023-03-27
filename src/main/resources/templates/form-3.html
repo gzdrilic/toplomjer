@@ -11,6 +11,18 @@
     <title>Toplomjer</title>
 </head>
 <body oncontextmenu="return false" class="snippet-body like" style="text-align:center">
+<div style="display:flex; justify-content:space-between;margin-bottom:24px;padding-bottom:16px">
+    <button onclick="javascript:history.back()" class="wrapper" style="width:25%; max-width: 82px; padding: 8px 8px 8px 8px;">
+        <img src="backarrow_logo.png">
+    </button>
+
+    <button th:onclick="|window.location.href = '/form-01?id=${currUser.id}'|" class="wrapper" style="width:25%; max-width: 82px;padding: 8px 8px 8px 8px;">
+        <img src="home_logo.png">
+    </button>
+
+</div>
+<div style="display:flex; justify-content:center; align-items:center;height:75vh;">
+
 <div class="wrapper" style="align-items:center; text-align:center; font-weight:500">
 
     <form id="make_checkbox_select" action="/form-end">
@@ -19,11 +31,11 @@
         </label>
 
         <select  id="text1" name="text1"  	autofocus>
-            <option>Podrška obitelji</option>
-            <option>Podrška medicinskog tima</option>
-            <option>Duhovna podrška</option>
-            <option>Psihološka podrška</option>
-            <option>Lijek</option>
+            <option>👪 Podrška obitelji</option>
+            <option>👩‍⚕️Podrška medicinskog tima</option>
+            <option>🕯️ Duhovna podrška</option>
+            <option>👩🏻‍⚕ Psihološka podrška</option>
+            <option>💊 Lijek</option>
          </select>
 
         <label for="text">Želiš li još nešto dodati?</label>
@@ -58,7 +70,7 @@
     </script>
 
 
-</div>
+</div></div>
 
 </body>
 </html>
