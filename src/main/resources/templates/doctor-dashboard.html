@@ -13,7 +13,7 @@
 <div class="container">
     <nav class="navbar">
         <h1><img src="logo.png" alt="" width="70" height="72"  /> Emocionalni toplomjer</h1>
-        <img src="loginikona.png" alt="" width="70" height="72" />
+        <img src="loginikona.png" alt="" width="70" height="72" /></button>
     </nav>
 
     <table id="patientTable" class="table table-hover">
@@ -27,6 +27,7 @@
             <th>Adresa</th>
             <th>Kontakt broj</th>
             <th>Zapisi</th>
+            <th>Izbriši</th>
 
         </tr>
         </thead>
@@ -40,6 +41,8 @@
             <td th:text="${currPatient.address}"></td>
             <td th:text="${currPatient.phoneNumber}"></td>
             <td><a th:href="@{'/showRecords?id=' + ${currPatient.id}}">Pregled</a></td>
+
+            <td><a th:href="@{'/deletePatient?id=' + ${currPatient.id}}" onclick="return confirm('Jeste li sigurni?');">Izbriši</a></td>
         </tr>
         </tbody>
     </table>
@@ -50,16 +53,7 @@
 
 
 
-<footer class="text-center text-grey fixed-bottom" style="background-color: white;">
-    <!-- Grid container -->
-    <div class="container p-4"></div>
-    <!-- Grid container -->
-
-    <div class="text-center p-4">
-        © 2023 Copyright:
-        <a class="text-reset fw-bold" href="https://toplomjer.herokuapp.com/">Emocionalni toplomjer Health IT</a>
-    </div>
-</footer>
+<footer class="text-center text-grey fixed-bottom" >@Toplomjer 2023 Health IT. All rights reserved.</footer>
 
 
 </body>

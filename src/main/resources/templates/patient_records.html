@@ -45,7 +45,20 @@
     <tr th:each="record : ${recordList}">
       <td th:text="${#dates.format(record.date, 'dd.MM.yyyy')}"></td>
       <td th:text="${record.happinessLevel}"></td>
-      <td th:text="${record.painLevel}"></td>
+      <td th:text="${record.painLevel}" th:switch = "${record.painLevel}"
+      ><span th:case = "${record.painLevel} == '7'" th:appendstyle = "'background: red'"></span>
+        <span th:case = "${record.painLevel} == '8'" th:appendstyle = "'background: red'"></span>
+        <span th:case = "${record.painLevel} == '9'" th:appendstyle = "'background: red'"></span>
+        <span th:case = "${record.painLevel} == '10'" th:appendstyle = "'background: red'"></span>
+        <span th:case = "${record.painLevel} == '6'" th:appendstyle = "'background: yellow'"></span>
+        <span th:case = "${record.painLevel} == '5'" th:appendstyle = "'background: yellow'"></span>
+        <span th:case = "${record.painLevel} == '4'" th:appendstyle = "'background: green'"></span>
+        <span th:case = "${record.painLevel} == '3'" th:appendstyle = "'background: green'"></span>
+        <span th:case = "${record.painLevel} == '2'" th:appendstyle = "'background: blue'"></span>
+        <span th:case = "${record.painLevel} == '1'" th:appendstyle = "'background: grey'"></span>
+        <span th:case = "${record.painLevel} == '0'" th:appendstyle = "'background: white'"></span>
+      </td>
+
       <td th:text="${record.text}"></td>
     </tr>
     </tbody>
@@ -54,19 +67,9 @@
 </div>
 
 
+<footer class="text-center text-grey fixed-bottom" >@Toplomjer 2023 Health IT. All rights reserved.</footer>
 
 
-
-<footer class="text-center text-grey fixed-bottom" style="background-color: white;">
-  <!-- Grid container -->
-  <div class="container p-4"></div>
-  <!-- Grid container -->
-
-  <div class="text-center p-4">
-    © 2023 Copyright:
-    <a class="text-reset fw-bold" href="https://toplomjer.herokuapp.com/">Emocionalni toplomjer Health IT</a>
-  </div>
-</footer>
 
 </body>
 </html>
