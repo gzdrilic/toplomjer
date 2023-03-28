@@ -83,7 +83,6 @@
             <th>Ime</th>
             <th>Prezime</th>
             <th>Zapisi</th>
-            <th>Uredi</th>
 
 
         </tr>
@@ -93,9 +92,7 @@
             <td th:text="${currPatient.id}"></td>
             <td th:text="${currPatient.firstName}"></td>
             <td th:text="${currPatient.lastName}"></td>
-            <td><a th:href="@{'/showRecords?id=' + ${currPatient.id}}">Pregled</a></td>s
-            <td><a th:href="@{'/addNewPatient?id=' + ${currPatient.id}}">Uredi</a></td>
-
+            <td><a th:href="@{'/showRecords?id=' + ${currPatient.id}}">Pregled</a></td>
         </tr>
         </tbody>
     </table>
