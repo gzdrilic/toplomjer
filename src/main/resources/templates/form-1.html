@@ -19,7 +19,7 @@
         <img src="backarrow_logo.png">
     </button>
 
-    <button th:onclick="|window.location.href = '/form-01?id=${currUser.id}'|" class="wrapper" style="width:25%; max-width: 82px;padding: 8px 8px 8px 8px;">
+    <button th:onclick="window.location.href = '/form-01?id=[[${currUser.id}]]&password=[[${currUser.password}]]'" class="wrapper" style="width:25%; max-width: 82px;padding: 8px 8px 8px 8px;">
         <img src="home_logo.png">
     </button>
 
@@ -49,15 +49,11 @@
         <div class="progress-bar"></div>
         <form action="form-2">
             <input type="range" name = "happinessLevel" min="0" value="50" max="100">
-        </form>
     </div>
 
 
     <button type="submit" class="button-next" style="margin-top:40px">DALJE</button>
     </form>
-
-</div>
-</div>
 
 
 <script type="text/javascript">

@@ -15,7 +15,7 @@
        <img src="backarrow_logo.png">
     </button>
 
-        <button th:onclick="|window.location.href = '/form-01?id=${currUser.id}'|" class="wrapper" style="width:25%; max-width: 82px;padding: 8px 8px 8px 8px;">
+        <button th:onclick="window.location.href = '/form-01?id=[[${currUser.id}]]&password=[[${currUser.password}]]'" class="wrapper" style="width:25%; max-width: 82px;padding: 8px 8px 8px 8px;">
             <img src="home_logo.png">
         </button>
 
